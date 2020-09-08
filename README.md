@@ -19,6 +19,6 @@ Download MySQL ZIP archive: https://dev.mysql.com/downloads/mysql/8.0.html
 ```
 mkdir build
 cd build
-cmake -DMYSQL_DIR="PATH_TO_MYSQL-8.0.21-winx64" -DCMAKE_BUILD_TYPE=Release ..
-cmake --build .
+cmake -DMYSQL_DIR="PATH_TO_MYSQL-8.0.21-winx64" ..
+cmake --build . --config Release
 ```
