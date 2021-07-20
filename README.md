@@ -14,11 +14,41 @@ Source code for LuaSQL can be downloaded from its GitHub repository.
 
 ## Building the module
 
+### Windows
+
 Download MySQL ZIP archive: https://dev.mysql.com/downloads/mysql/8.0.html
 
 ```
 mkdir build
 cd build
-cmake -DMYSQL_DIR="PATH_TO_MYSQL-8.0.21-winx64" ..
+cmake -DMYSQL_DIR="PATH_TO_MYSQL-8.0.26-winx64" ..
 cmake --build . --config Release
+```
+
+```
+Modules
+  luasql
+    mysql.dll
+  libcrypto-1_1-x64.dll
+  libmysql.dll
+  libssl-1_1-x64.dll
+```
+
+`libcrypto-1_1-x64.dll`, `libmysql.dll` and `libssl-1_1-x64.dll` can be obtained out of the mysql sdk folder.
+
+### Linux
+
+Download MySQL ZIP archive for generic linux: https://dev.mysql.com/downloads/mysql/8.0.html
+
+```
+mkdir build
+cd build
+cmake -DMYSQL_DIR="PATH_TO_MYSQL-8.0.26-linux-glibc2.12-x86_64" ..
+cmake --build . --config Release
+```
+
+```
+Modules
+  luasql
+    mysql.so
 ```
